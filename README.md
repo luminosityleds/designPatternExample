@@ -21,11 +21,21 @@ To stop the mongodb database after starting, run the following:
 docker compose down
 ```
 
+## Validate Data
+Validation happens after running.  Data is either valid or invalid based on the schema.
+```shell
+docker compose up --build
+```
+### Schema
+Use JSON Schema to create a schema which can be used with AJV https://json-schema.org/learn/getting-started-step-by-step
+### Validate JSON data with AJV
+https://ajv.js.org/
+
 <!-- TODO: remove later -->
 CONOPS for cities
 1. UI: Start Menu -> new & load and Quit
 2. Start Menu creates UUID that is saved in DB under accounts
-3. accounts schema has 3 saved files which is just the amount of cities 
+3. accounts schema has 3 saved files which is just the amount of cities
 4. 2 modes which are census (GET) and nuke (POST/DELETE)
 5. census and nuke mode are in a map or table mode
 6. can export the map to svg or png

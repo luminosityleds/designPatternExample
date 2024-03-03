@@ -1,7 +1,7 @@
 # Use the official Node.js image as base
 FROM node:latest
 
-# Copy files in mongo_seed directory to docker image
+# Copy files in mongodb directory to docker image
 COPY . .
 
 # Make the shell script executable

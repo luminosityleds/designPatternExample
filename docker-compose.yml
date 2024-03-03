@@ -10,21 +10,21 @@ services:
 
     mongo_validate:
         build:
-            context: ./mongo_seed
+            context: ./mongodb
             dockerfile: Dockerfile
         volumes:
-            - ./mongo_seed:/mongo_seed
+            - ./mongodb:/mongodb
         container_name: mongo_validate
 
     # https://stackoverflow.com/questions/48178870/import-data-on-mongodb-using-docker-compose
-    mongo_seed:
+    mongodb:
         image: mongo
-        links: 
+        links:
             - mongodb
         volumes:
-            - ./mongo_seed:/mongo_seed
-        command: /mongo_seed/import.sh
-        container_name: mongo_seed
+            - ./mongodb:/mongodb
+        command: /mongodb/import.sh
+        container_name: mongodb
 #   client:
 #     build: "client/"
 #     command: "npm start"
