@@ -17,14 +17,14 @@ services:
         container_name: mongo_validate
 
     # https://stackoverflow.com/questions/48178870/import-data-on-mongodb-using-docker-compose
-    mongodb:
+    mongodb_seed:
         image: mongo
         links:
             - mongodb
         volumes:
             - ./mongodb:/mongodb
         command: /mongodb/import.sh
-        container_name: mongodb
+        container_name: mongodb_seed
 #   client:
 #     build: "client/"
 #     command: "npm start"

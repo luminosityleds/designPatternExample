@@ -11,7 +11,7 @@ echo "
 uploading mongodb/cities.json to MongoDB
 "
 mongoimport --host mongodb --db test --collection cities --type json --file /mongodb/cities.json --jsonArray
-echo "
+echo '
   _____  _   _  ____
  | ____|| \ | ||  _ \
  |  _|  |  \| || | | |
@@ -19,4 +19,4 @@ echo "
  |_____||_| \_||____/
 
 uploaded mongodb/cities.json to MongoDB
-"
+'

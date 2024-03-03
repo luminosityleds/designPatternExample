@@ -12,7 +12,7 @@ validating mongodb/cities.json to based on mongodb/cities_schema.json
 "
 npm install -g ajv-cli
 ajv validate -s ./mongodb/cities_schema.json -d ./mongodb/cities.json
-echo "
+echo '
   _____  _   _  ____
  | ____|| \ | ||  _ \
  |  _|  |  \| || | | |
@@ -20,4 +20,4 @@ echo "
  |_____||_| \_||____/
 
 validated mongodb/cities.json to based on mongodb/cities_schema.json
-"
+'
