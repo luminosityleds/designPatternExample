@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": { "type": "string" },
+      "longitude": { "type": "number" },
+      "latitude": { "type": "number" },
+      "population": { "type": "integer" },
+      "average_airfare_price_usd": { "type": "number" },
+      "average_hotel_price_usd": { "type": "number" },
+      "top_5_things_to_do": {
+        "type": "array",
+        "items": { "type": "string" },
+        "maxItems": 5
+      }
+    },
+    "required": [
+      "name",
+      "longitude",
+      "latitude",
+      "population",
+      "average_airfare_price_usd",
+      "average_hotel_price_usd",
+      "top_5_things_to_do"
+    ]
+  }
+}

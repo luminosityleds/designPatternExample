@@ -6,6 +6,15 @@ services:
         image: mongo
         ports:
             - "27017:27017"
+        container_name: mongodb
+
+    mongo_validate:
+        build:
+            context: ./mongo_seed
+            dockerfile: Dockerfile
+        volumes:
+            - ./mongo_seed:/mongo_seed
+        container_name: mongo_validate
 
     # https://stackoverflow.com/questions/48178870/import-data-on-mongodb-using-docker-compose
     mongo_seed:
@@ -15,6 +24,7 @@ services:
         volumes:
             - ./mongo_seed:/mongo_seed
         command: /mongo_seed/import.sh
+        container_name: mongo_seed
 #   client:
 #     build: "client/"
 #     command: "npm start"
